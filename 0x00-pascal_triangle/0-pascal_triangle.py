@@ -4,13 +4,10 @@ Returns list representing the Pascal's triangle of n
 '''
 
 
-
 def pascal_triangle(n):
     '''returns empty list if n <= 0'''
     if n <= 0:
         return []
-
-
     triangle = [[1]]
     for i in range(1, n):
         prev_row = triangle[-1]
@@ -19,4 +16,3 @@ def pascal_triangle(n):
             row[j] = prev_row[j-1] + prev_row[j]
         triangle.append(row)
     return triangle
-
